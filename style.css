@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+	font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+body {
+	height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	background: #f75757;
+}
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+.card {
+	padding: 15px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #0005;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.img_container {
+	background-image: url(https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?w=826);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 7px solid #fff;
+	box-shadow: 0 0 10px #0002;
+}
+.card:nth-child(2) .img_container {
+	background-image: url(https://img.freepik.com/free-photo/cute-freelance-girl-using-laptop-sitting-floor-smiling_176420-20221.jpg?w=826);
+}
+.card:nth-child(3) .img_container {
+	background-image: url(https://img.freepik.com/free-photo/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background_1258-66609.jpg?w=826);
+}
+.content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.content h2 {
+	color: #000;
+	text-transform: capitalize;
+	padding: 10px 0 5px 0;
+}
+.content p {
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	color: #0005;
+	padding-bottom: 10px;
+}
+.social_links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	width: 100%;
+}
+.social_links i {
+	height: 35px;
+	width: 35px;
+	line-height: 0;
+	background: #7340ef;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	color: #fff;
+}
+@media (max-width: 768px) {
+	.container {
+		grid-template-columns: 1fr 1fr;
+	}
+	.card:nth-child(3) {
+		grid-column: span 2;
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+	.card:nth-child(3) {
+		grid-column: span 1;
+	}
+}
